@@ -1,30 +1,32 @@
 # Hangszercsere.hu
+
+
+Hangszercsere.hu egy adás/vétel oldal használt hangszerek számára.
+Valós idejű üzenetek a felhasználókkal. AI által készített ajánlások és automatikus árú értékelés 10-es skálán.
+<br>
 <br>
 
-## Projekt célja:
 
-- Használt hangszer adás/vétel oldal<br>
-- Élő üzenetek a feladóval<br>
-- AI értékelő rendszer (10-es skálán)<br>
-- Megbízhatóság rendszer<br>
-- Ajánló rendszer
-- Ár ajánló hangszer feltöltésekkor
+## Nyílt forráskód
+A hangszercsere.hu nyílt forráskódú, és MPL-2.0 license alatt terjeszthető.
+<br>
+<br>
+
+## Egyéb specifikációk
+- Ár becslés árú feltöltéskor (AI 
 - Kíváságlista (Wishlist)
+- Responsive Design (eszköz független megjelenítés telefonokon is)
 
-<br>
-
-## Projekt tagjai:
+## Csapat tagjai:
 
 - Kalucza Tihamér Bendegúz (vezető)
 - Balogh Marcell
 
-<br>
-
 ## Használt technológiák:
 
 - Frontend:
-  - Angular
+  - Angular (a weboldal megjelenítéséhez)
 - Backend:
-  - Node.js
+  - Node.js (az árúk rugalmas lekéréseihez)
 - Database:
-  - SQLite
+  - SQLite (az árúk tárolásához)
