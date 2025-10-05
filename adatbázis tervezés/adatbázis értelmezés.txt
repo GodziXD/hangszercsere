@@ -1,0 +1,100 @@
+user
+A rendszer összes felhasználójának azonosítására és az adataik tárolására.
+
+Attribútumok:
+id – egyedi azonosító (PK)
+
+name – felhasználónév
+
+pass_hash – jelszó biztonságos hash formában
+
+location – város vagy ország megnevezése
+
+rating – átlagos értékelés (FLOAT, pl. 4.7)
+
+join_date – csatlakozás dátuma
+
+
+listing
+Tárolja a felhasználók által létrehozott hirdetéseket.
+
+Attribútumok:
+
+id – hirdetés azonosító (PK)
+
+user_id – a hirdetést létrehozó felhasználó (FK)
+
+title – hirdetés címe
+
+description – leírás
+
+price – ár
+
+status – pl. “active”, “sold”
+
+created_at – létrehozás ideje
+
+images
+Hirdetésekhez tartozó képek tárolására mivel egy hirdetéshez több kép is tartozhat.
+
+Attribútumok:
+
+id – kép azonosító (PK)
+
+listing_id – kapcsolódó hirdetés (FK)
+
+image_url – kép elérési útja
+
+transactions
+Rögzíti a felhasználók közötti vásárlásokat / eladásokat.
+
+Attribútumok:
+
+id – tranzakció azonosító (PK)
+
+sent_from – eladó (FK → user.id)
+
+sent_to – vevő (FK → user.id)
+
+price – tranzakció értéke
+
+status – státusz (pending, completed)
+
+
+reviews
+Értékelések a tranzakciók után.
+
+Attribútumok:
+
+id – értékelés azonosító (PK)
+
+listing_id – kapcsolódó hirdetés (FK → listing.id)
+
+transaction_id – kapcsolódó tranzakció (FK)
+
+sent_from – értékelő (FK → user.id)
+
+sent_to – értékelt fél (FK → user.id)
+
+rating – értékelés (0–5 skálán)
+
+comment – szöveges visszajelzés
+
+timestamp – értékelés ideje
+
+messages
+Tárolja a felhasználók közötti üzeneteket.
+
+Attribútumok:
+
+id – üzenet azonosító (PK)
+
+sent_from – küldő (FK → user.id)
+
+sent_to – címzett (FK → user.id)
+
+listing_id – kapcsolódó hirdetés (FK)
+
+content – üzenet tartalma
+
+create_at – létrehozás ideje
