@@ -13,7 +13,7 @@ A hangszercsere.hu nyílt forráskódú, és MPL-2.0 license alatt terjeszthető
 <br>
 
 ## Egyéb specifikációk
-- Ár becslés árú feltöltéskor (AI 
+- Ár becslés árú feltöltéskor (AI alapú)
 - Kíváságlista (Wishlist)
 - Responsive Design (eszköz független megjelenítés telefonokon is)
 
