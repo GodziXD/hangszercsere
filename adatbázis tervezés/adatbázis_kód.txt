@@ -49,7 +49,6 @@ CREATE TABLE listings (
     condition TEXT CHECK(condition IN ('New','Very Good','Good','Satisfactory')),
     brand TEXT,
     model TEXT,
-    instrument_type TEXT,
     ai_rating REAL CHECK (ai_rating >= 0 AND ai_rating <= 5),
     ai_reviewed BOOLEAN DEFAULT 0,
     ai_feedback TEXT,
