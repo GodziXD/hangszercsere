@@ -76,7 +76,6 @@ Attribútumok:
 - condition – állapot (New / Very Good / Good / Satisfactory)
 - brand – gyártó
 - model – modell
-- instrument_type – hangszer típusa
 - ai_rating – AI értékelés 0–5
 - ai_reviewed (BOOLEAN) – AI feldolgozta-e
 - ai_feedback – AI visszajelzés
