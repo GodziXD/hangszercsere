@@ -1,1 +1,195 @@
 
+1. Termék
+ID: 1
+Név: Stratocaster
+Kategória: Guitar
+Ár: 50 000 Ft
+Eladó: Marci
+Márka/Modell: Harley Benton ST-20HSS
+Állapot: Very Good
+Leírás: black ssh strat.
+Képek: 3 db
+Videók: 1 db
+Létrehozva: 2025-11-02
+
+2. Termék
+ID: 2
+Név: Yamaha keyboard
+Kategória: Keyboard
+Ár: 60 000 Ft
+Eladó: Fanni
+Márka/Modell: Yamaha
+Állapot: Very Good
+Leírás: yamaha
+Képek: 3 db
+Videók: nincs
+Létrehozva: 2025-11-02
+
+3. Termék
+ID: 3
+Név: Fender guitar
+Kategória: Guitar
+Ár: 40 000 Ft
+Eladó: Fanni
+Márka/Modell: Fender
+Állapot: Very Good
+Leírás: acoustic guitar
+Képek: 3 db
+Videók: nincs
+Létrehozva: 2025-11-02
+
+4. Termék
+ID: 4
+Név: Capo
+Kategória: Other
+Ár: 2 500 Ft
+Eladó: Marci
+Márka/Modell: -
+Állapot: Very Good
+Leírás: -
+Képek: 1 db
+Videók: nincs
+Létrehozva: 2025-11-04
+
+5. Termék
+ID: 5
+Név: HB-20R Amplifier
+Kategória: Other
+Ár: 40 000 Ft
+Eladó: Marci
+Márka/Modell: Harley Benton HB-20R
+Állapot: Very Good
+Leírás: Elektromos gitár erősítő
+Képek: 2 db
+Videók: nincs
+Létrehozva: 2025-11-04
+
+6. Termék
+ID: 6
+Név: Ernie Ball Super Slinky 2223
+Kategória: Other
+Ár: 4 000 Ft
+Eladó: Marci
+Márka/Modell: Ernie Ball Super Slinky 2223
+Állapot: New
+Leírás: Ernie Ball Super Slinky 2223 gitár húrok
+Képek: 3 db
+Videók: nincs
+Létrehozva: 2025-11-04
+
+7. Termék
+ID: 7
+Név: Boss DS-1 Distortion
+Kategória: Pedal
+Ár: 20 000 Ft
+Eladó: Marci
+Márka/Modell: Boss DS-1
+Állapot: Good
+Leírás: distortion pedal
+Képek: 1 db
+Videók: nincs
+Létrehozva: 2025-11-04
+
+8. Termék
+ID: 8
+Név: Behringer U-Phoria Audio Interface
+Kategória: Recording
+Ár: 9 000 Ft
+Eladó: Marci
+Márka/Modell: Behringer U-Phoria UM2 
+Állapot: Very Good
+Leírás: -
+Képek: 1 db
+Videók: nincs
+Létrehozva: 2025-11-04
+
+9. Termék
+ID: 9
+Név: Paiste cintányér Set
+Kategória: Drums
+Ár: 80 000 Ft
+Eladó: Fanni
+Márka/Modell: Paiste
+Állapot: Good
+Leírás: -
+Képek: 1 db
+Videók: nincs
+Létrehozva: 2025-11-04
+
+10. Termék
+ID: 10
+Név: Squier Jazz Bass
+Kategória: Bass
+Ár: 85 000 Ft
+Eladó: Marci
+Márka/Modell: Squier Affinity Jazz Bass
+Állapot: Good
+Leírás: -
+Képek: 1 db
+Videók: nincs
+Létrehozva: 2025-11-04
+
+11. Termék
+ID: 11
+Név: Yamaha Drum DS-840 Throne
+Kategória: Drums
+Ár: 70 000 Ft
+Eladó: Fanni
+Márka/Modell: Yamaha DS-840
+Állapot: New
+Leírás: -
+Képek: 1 db
+Videók: nincs
+Létrehozva: 2025-11-04
+
+12. Termék
+ID: 12
+Név: Behringer 4-channel mixer
+Kategória: Recording
+Ár: 25 000 Ft
+Eladó: Marci
+Márka/Modell: Behringer Xenyx
+Állapot: Very Good
+Leírás: Kisméretű keverőpult
+Képek: 1 db
+Videók: nincs
+Létrehozva: 2025-11-04
+
+13. Termék
+ID: 13
+Név: Casio Sustain Pedal
+Kategória: Keyboard
+Ár: 5 000 Ft
+Eladó: Marci
+Márka/Modell: Casio
+Állapot: Very Good
+Leírás: sustain pedal
+Képek: 1 db
+Videók: nincs
+Létrehozva: 2025-11-04
+
+14. Termék
+ID: 14
+Név: Shure SM57 mikrofon
+Kategória: Recording
+Ár: 32 000 Ft
+Eladó: Marci
+Márka/Modell: Shure SM57
+Állapot: Very Good
+Leírás: -
+Képek: 1 db
+Videók: nincs
+Létrehozva: 2025-11-04
+
+15. Termék
+ID: 15
+Név: Marshall MG10 erősítő
+Kategória: Amplifier
+Ár: 22 000 Ft
+Eladó: Marci
+Márka/Modell: Marshall MG10
+Állapot: Very Good
+Leírás: -
+Képek: 1 db
+Videók: nincs
+Létrehozva: 2025-11-04
