@@ -193,3 +193,51 @@ Leírás: -
 Képek: 1 db
 Videók: nincs
 Létrehozva: 2025-11-04
+
+==== SQL ====
+
+INSERT INTO listings ("id", "user_id", "title", "description", "price", "status", "created_at", "category_id", "condition", "brand", "model", "ai_rating", "ai_reviewed", "ai_feedback") 
+VALUES (1, 2, 'Stratocaster', 'black ssh strat.', 50000, 'active', NULL, 1, 'Very Good', 'Harley Benton', 'ST-20HSS', NULL, 0, NULL);
+
+INSERT INTO listings ("id", "user_id", "title", "description", "price", "status", "created_at", "category_id", "condition", "brand", "model", "ai_rating", "ai_reviewed", "ai_feedback") 
+VALUES (2, 3, 'Yamaha keyboard', 'yamaha', 60000, 'active', NULL, 3, 'Very Good', 'Yamaha', NULL, NULL, 0, NULL);
+
+INSERT INTO listings ("id", "user_id", "title", "description", "price", "status", "created_at", "category_id", "condition", "brand", "model", "ai_rating", "ai_reviewed", "ai_feedback") 
+VALUES (3, 3, 'Fender guitar', 'acoustic guitar', 40000, 'active', NULL, 1, 'Very Good', 'Fender', NULL, NULL, 0, NULL);
+
+INSERT INTO listings ("id", "user_id", "title", "description", "price", "status", "created_at", "category_id", "condition", "brand", "model", "ai_rating", "ai_reviewed", "ai_feedback") 
+VALUES (4, 2, 'Capo', '', 2500, 'active', NULL, 0, 'Very Good', '', '', NULL, 0, NULL);
+
+INSERT INTO listings ("id", "user_id", "title", "description", "price", "status", "created_at", "category_id", "condition", "brand", "model", "ai_rating", "ai_reviewed", "ai_feedback") 
+VALUES (5, 2, 'HB-20R Amplifier', 'Elektromos gitár erősítő', 40000, 'active', NULL, 0, 'Very Good', 'Harley Benton', 'HB-20R', NULL, 0, NULL);
+
+INSERT INTO listings ("id", "user_id", "title", "description", "price", "status", "created_at", "category_id", "condition", "brand", "model", "ai_rating", "ai_reviewed", "ai_feedback") 
+VALUES (6, 2, 'Ernie Ball Super Slinky 2223', 'Ernie Ball Super Slinky 2223 gitár húrok', 4000, 'active', NULL, 0, 'New', 'Ernie Ball', 'Super Slinky 2223', NULL, 0, NULL);
+
+INSERT INTO listings ("id", "user_id", "title", "description", "price", "status", "created_at", "category_id", "condition", "brand", "model", "ai_rating", "ai_reviewed", "ai_feedback") 
+VALUES (7, 2, 'Boss DS-1 Distortion', 'distortion pedal', 20000, 'active', NULL, 6, 'Good', 'Boss', 'DS-1', NULL, 0, NULL);
+
+INSERT INTO listings ("id", "user_id", "title", "description", "price", "status", "created_at", "category_id", "condition", "brand", "model", "ai_rating", "ai_reviewed", "ai_feedback") 
+VALUES (8, 2, 'Behringer U-Phoria Audio Interface', '', 9000, 'active', NULL, 7, 'Very Good', 'Behringer', 'U-Phoria UM2', NULL, 0, NULL);
+
+INSERT INTO listings ("id", "user_id", "title", "description", "price", "status", "created_at", "category_id", "condition", "brand", "model", "ai_rating", "ai_reviewed", "ai_feedback") 
+VALUES (9, 3, 'Paiste cintányér Set', '', 80000, 'active', NULL, 2, 'Good', 'Paiste', '', NULL, 0, NULL);
+
+INSERT INTO listings ("id", "user_id", "title", "description", "price", "status", "created_at", "category_id", "condition", "brand", "model", "ai_rating", "ai_reviewed", "ai_feedback") 
+VALUES (10, 2, 'Squier Jazz Bass', '', 85000, 'active', NULL, 4, 'Good', 'Squier', 'Affinity Jazz Bass', NULL, 0, NULL);
+
+INSERT INTO listings ("id", "user_id", "title", "description", "price", "status", "created_at", "category_id", "condition", "brand", "model", "ai_rating", "ai_reviewed", "ai_feedback") 
+VALUES (11, 3, 'Yamaha Drum DS-840 Throne', '', 70000, 'active', NULL, 2, 'New', 'Yamaha', 'DS-840', NULL, 0, NULL);
+
+INSERT INTO listings ("id", "user_id", "title", "description", "price", "status", "created_at", "category_id", "condition", "brand", "model", "ai_rating", "ai_reviewed", "ai_feedback") 
+VALUES (12, 2, 'Behringer 4-channel mixer', 'Kisméretű keverőpult', 25000, 'active', NULL, 7, 'Very Good', 'Behringer', 'Xenyx', NULL, 0, NULL);
+
+INSERT INTO listings ("id", "user_id", "title", "description", "price", "status", "created_at", "category_id", "condition", "brand", "model", "ai_rating", "ai_reviewed", "ai_feedback") 
+VALUES (13, 2, 'Casio Sustain Pedal', 'sustain pedal', 5000, 'active', NULL, 3, 'Very Good', 'Casio', '', NULL, 0, NULL);
+
+INSERT INTO listings ("id", "user_id", "title", "description", "price", "status", "created_at", "category_id", "condition", "brand", "model", "ai_rating", "ai_reviewed", "ai_feedback") 
+VALUES (14, 2, 'Shure SM57 mikrofon', '', 32000, 'active', NULL, 7, 'Very Good', 'Shure', 'SM57', NULL, 0, NULL);
+
+INSERT INTO listings ("id", "user_id", "title", "description", "price", "status", "created_at", "category_id", "condition", "brand", "model", "ai_rating", "ai_reviewed", "ai_feedback") 
+VALUES (15, 2, 'Marshall MG10 erősítő', '', 22000, 'active', NULL, 5, 'Very Good', 'Marshall', 'MG10', NULL, 0, NULL);
+
