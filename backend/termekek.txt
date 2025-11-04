@@ -194,8 +194,9 @@ Képek: 1 db
 Videók: nincs
 Létrehozva: 2025-11-04
 
-==== SQL ====
+============ SQL ============
 
+=== listings ===
 INSERT INTO listings ("id", "user_id", "title", "description", "price", "status", "created_at", "category_id", "condition", "brand", "model", "ai_rating", "ai_reviewed", "ai_feedback") 
 VALUES (1, 2, 'Stratocaster', 'black ssh strat.', 50000, 'active', NULL, 1, 'Very Good', 'Harley Benton', 'ST-20HSS', NULL, 0, NULL);
 
@@ -240,4 +241,38 @@ VALUES (14, 2, 'Shure SM57 mikrofon', '', 32000, 'active', NULL, 7, 'Very Good',
 
 INSERT INTO listings ("id", "user_id", "title", "description", "price", "status", "created_at", "category_id", "condition", "brand", "model", "ai_rating", "ai_reviewed", "ai_feedback") 
 VALUES (15, 2, 'Marshall MG10 erősítő', '', 22000, 'active', NULL, 5, 'Very Good', 'Marshall', 'MG10', NULL, 0, NULL);
+
+=== media ===
+
+INSERT INTO media ("listing_id", "url", "type") VALUES (1, 'guitar3.png', 'image');
+INSERT INTO media ("listing_id", "url", "type") VALUES (1, 'guitar2.png', 'image');
+INSERT INTO media ("listing_id", "url", "type") VALUES (1, 'guitar1.png', 'image');
+INSERT INTO media ("listing_id", "url", "type") VALUES (1, 'IMG_2185.mp4', 'video');
+
+INSERT INTO media ("listing_id", "url", "type") VALUES (2, 'piano3.png', 'image');
+INSERT INTO media ("listing_id", "url", "type") VALUES (2, 'piano2.png', 'image');
+INSERT INTO media ("listing_id", "url", "type") VALUES (2, 'piano1.png', 'image');
+
+INSERT INTO media ("listing_id", "url", "type") VALUES (3, 'acoustic3.png', 'image');
+INSERT INTO media ("listing_id", "url", "type") VALUES (3, 'acoustic2.png', 'image');
+INSERT INTO media ("listing_id", "url", "type") VALUES (3, 'acoustic1.png', 'image');
+
+INSERT INTO media ("listing_id", "url", "type") VALUES (4, 'capo.jpg', 'image');
+
+INSERT INTO media ("listing_id", "url", "type") VALUES (5, 'amp2.jpg', 'image');
+INSERT INTO media ("listing_id", "url", "type") VALUES (5, 'amp1.jpg', 'image');
+
+INSERT INTO media ("listing_id", "url", "type") VALUES (6, 'strings3.jpg', 'image');
+INSERT INTO media ("listing_id", "url", "type") VALUES (6, 'strings2.jpg', 'image');
+INSERT INTO media ("listing_id", "url", "type") VALUES (6, 'strings1.jpg', 'image');
+
+INSERT INTO media ("id", "listing_id", "url", "type") VALUES (17, 7, 'boss.png', 'image');
+INSERT INTO media ("id", "listing_id", "url", "type") VALUES (18, 8, 'interface.png', 'image');
+INSERT INTO media ("id", "listing_id", "url", "type") VALUES (19, 9, 'paiste.png', 'image');
+INSERT INTO media ("id", "listing_id", "url", "type") VALUES (20, 10, 'jazz_bass.png', 'image');
+INSERT INTO media ("id", "listing_id", "url", "type") VALUES (21, 11, 'drum_throne.png', 'image');
+INSERT INTO media ("id", "listing_id", "url", "type") VALUES (22, 12, 'behringer_mixer.png', 'image');
+INSERT INTO media ("id", "listing_id", "url", "type") VALUES (23, 13, 'casio_sustain.png', 'image');
+INSERT INTO media ("id", "listing_id", "url", "type") VALUES (24, 14, 'shure.png', 'image');
+INSERT INTO media ("id", "listing_id", "url", "type") VALUES (25, 15, 'mg10g.png', 'image');
 
