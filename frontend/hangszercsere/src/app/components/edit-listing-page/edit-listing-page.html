@@ -1,0 +1,192 @@
+<div class="w-full min-h-screen bg-light-site-bg dark:bg-site-bg py-10">
+    <div class="max-w-5xl mx-auto px-4 flex flex-col gap-10">
+
+        <!-- Title + Price -->
+        <div>
+            <h1 class="text-4xl font-bold text-light-text-primary dark:text-text-primary mb-2">
+                <input type="text" [(ngModel)]="listing.title" class="input-field" placeholder="Title" />
+            </h1>
+
+            <p class="text-2xl font-semibold text-accent mb-4">
+                <input type="number" [(ngModel)]="listing.price"
+                    class="text-2xl font-semibold text-accent bg-transparent border border-gray-400 rounded px-1 py-0.5 focus:outline-none focus:border-accent"
+                    placeholder="Price" />
+                Ft
+            </p>
+            <hr class="border-gray-300 dark:border-gray-700">
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+            <!-- LEFT SIDE: Images & Videos -->
+            <div class="flex flex-col gap-6">
+
+                <!-- Image Gallery -->
+                <div *ngIf="(listing?.images?.length || PreviewImages.length)" class="flex flex-col gap-3">
+                    <div class="grid grid-cols-2 gap-3">
+
+                        <!-- Existing listing images -->
+                        <ng-container *ngFor="let img of listing?.images; let i = index">
+                            <div class="relative w-64 h-64">
+                                <button
+                                    class="absolute top-1 right-1 z-10 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs hover:bg-red-600"
+                                    (click)="listing.images.splice(i, 1)" type="button">×</button>
+
+                                <img [src]="'https://hangszercsere.hu/uploads/' + img"
+                                    class="cursor-pointer w-full h-full object-cover rounded">
+                            </div>
+                        </ng-container>
+
+                        <!-- Preview images -->
+                        <ng-container *ngFor="let img of PreviewImages; let i = index">
+                            <div class="relative w-64 h-64">
+                                <button
+                                    class="absolute top-1 right-1 z-10 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs hover:bg-red-600"
+                                    (click)="selectedImages.splice(i, 1); PreviewImages.splice(i, 1)"
+                                    type="button">×</button>
+
+                                <img [src]="img" class="cursor-pointer w-full h-full object-cover rounded">
+                            </div>
+                        </ng-container>
+
+                    </div>
+                </div>
+
+                <!-- Videos -->
+                <div *ngIf="(listing?.videos?.length || PreviewVideos.length)" class="flex flex-col gap-4">
+
+                    <!-- Existing listing videos -->
+                    <ng-container *ngFor="let video of listing?.videos; let i = index">
+                        <div class="relative w-full">
+                            <button
+                                class="absolute top-1 right-1 z-10 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs hover:bg-red-600"
+                                (click)="listing.videos.splice(i, 1)" type="button">×</button>
+                            <video controls class="rounded-lg shadow-md w-full">
+                                <source [src]="'https://hangszercsere.hu/uploads/' + video" type="video/mp4">
+                            </video>
+                        </div>
+                    </ng-container>
+
+                    <!-- Preview videos -->
+                    <ng-container *ngFor="let video of PreviewVideos; let i = index">
+                        <div class="relative w-full">
+                            <button
+                                class="absolute top-1 right-1 z-10 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs hover:bg-red-600"
+                                (click)="selectedVideos.splice(i, 1); PreviewVideos.splice(i, 1)"
+                                type="button">×</button>
+                            <video controls class="rounded-lg shadow-md w-full">
+                                <source [src]="video" type="video/mp4">
+                            </video>
+                        </div>
+                    </ng-container>
+
+                </div>
+
+                <div class="flex flex-col gap-1">
+                    <label class="text-light-text-secondary dark:text-text-secondary font-semibold">Images</label>
+                    <input type="file" multiple (change)="onSelectImages($event)" accept="image/*"
+                        class="text-light-text-secondary dark:text-text-secondary" />
+                </div>
+
+                <div class="flex flex-col gap-1">
+                    <label class="text-light-text-secondary dark:text-text-secondary font-semibold">Videos</label>
+                    <input type="file" multiple (change)="onSelectVideos($event)" accept="video/*"
+                        class="text-light-text-secondary dark:text-text-secondary" />
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE: Details -->
+            <div class="flex flex-col gap-5">
+
+                <p class="text-light-text-primary dark:text-text-primary leading-relaxed">
+                    <textarea [(ngModel)]="listing.description"
+                        class="w-full text-lg font-normal text-light-text-primary dark:text-text-primary bg-transparent border border-gray-400 rounded px-2 py-1 focus:outline-none focus:border-accent resize-none"
+                        placeholder="Description..." rows="4"></textarea>
+                </p>
+
+
+                <div class="flex flex-col gap-2 text-light-text-secondary dark:text-text-secondary">
+
+                    <div class="flex items-center gap-2">
+                        <label class="font-semibold w-20">Category</label>
+                        <select id="category" [(ngModel)]="listing.category_id" name="category" required
+                            class="input-field">
+                            <option [value]="0">Other</option>
+                            <option [value]="1">Guitar</option>
+                            <option [value]="2">Bass</option>
+                            <option [value]="3">Keyboard</option>
+                            <option [value]="4">Drums</option>
+                            <option [value]="5">Amplifier</option>
+                            <option [value]="6">Pedal</option>
+                            <option [value]="7">Recording</option>
+                        </select>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <label class="font-semibold w-20">Condition</label>
+
+                        <select [(ngModel)]="listing.condition" [ngClass]="{
+                            'text-green-500 border-green-500 focus:border-green-500': listing.condition === 'New',
+                            'text-emerald-400 border-emerald-400 focus:border-emerald-400': listing.condition === 'Very Good',
+                            'text-yellow-500 border-yellow-500 focus:border-yellow-500': listing.condition === 'Good',
+                            'text-orange-500 border-orange-500 focus:border-orange-500': listing.condition === 'Satisfactory'
+                        }"
+                            class="w-40 bg-transparent dark:bg-gray-800 border border-gray-400 rounded px-2 py-1 focus:outline-none">
+
+                            <option value="" disabled class="text-gray-400 dark:bg-gray-800">Select condition</option>
+                            <option value="New" class="text-green-500 font-semibold dark:bg-gray-800">New</option>
+                            <option value="Very Good" class="text-emerald-400 font-semibold dark:bg-gray-800">Very Good
+                            </option>
+                            <option value="Good" class="text-yellow-500 font-semibold dark:bg-gray-800">Good</option>
+                            <option value="Satisfactory" class="text-orange-500 font-semibold dark:bg-gray-800">
+                                Satisfactory</option>
+                        </select>
+
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <label class="font-semibold w-20">Brand</label>
+                        <input type="text" [(ngModel)]="listing.brand"
+                            class="w-40 bg-transparent border border-gray-400 rounded px-2 py-1 focus:outline-none focus:border-accent" />
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <label class="font-semibold w-20">Model</label>
+                        <input type="text" [(ngModel)]="listing.model"
+                            class="w-40 bg-transparent border border-gray-400 rounded px-2 py-1 focus:outline-none focus:border-accent" />
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="text-light-text-secondary dark:text-text-secondary flex flex-col gap-1">
+                    <p><span class="font-semibold">Seller:</span>seller:
+                        {{listing?.seller }}</p>
+                    <p><span class="font-semibold">Status:</span> {{ listing?.status }}</p>
+                    <p><span class="font-semibold">Posted:</span> {{ listing?.created_at | date:'mediumDate' }}</p>
+                </div>
+
+                <div *ngIf="uploadProgress > 0 && uploadProgress < 100" class="mt-4">
+                    <p class="text-light-text-secondary dark:text-text-secondary mb-1">Uploading: {{ uploadProgress }}%
+                    </p>
+                    <div class="w-full bg-gray-300 dark:bg-gray-600 h-3 rounded overflow-hidden">
+                        <div class="h-full bg-accent transition-all" [style.width.%]="uploadProgress"></div>
+                    </div>
+                </div>
+
+                <!-- ADD TO CART BUTTON -->
+                <button class="bg-accent text-white font-semibold py-3 rounded hover:bg-accent-hover
+                    transition w-full md:w-1/2" (click)="SaveChanges()">
+                    Save changes
+                </button>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>

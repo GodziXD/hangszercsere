@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+
+
+.condition-badge {
+  @apply absolute top-2 left-2 px-2 py-0.5 rounded-full font-semibold text-xs border
+         backdrop-blur-sm shadow;
+}
+
+  .button {
+    @apply px-3 py-1 rounded transition-all
+           bg-light-card-bg text-light-text-secondary
+           hover:bg-light-accent hover:text-light-text-primary
+           dark:bg-card-bg dark:text-text-secondary
+           dark:hover:bg-accent dark:hover:text-text-primary;
+  }
+
+  .nav-item {
+    @apply px-3 py-1 rounded transition-all
+           bg-light-card-bg text-light-text-secondary
+           hover:bg-light-accent hover:text-light-text-primary
+           dark:bg-card-bg dark:text-text-secondary
+           dark:hover:bg-accent dark:hover:text-text-primary;
+  }
+
+  .nav-logo {
+    @apply font-mono font-bold text-lg cursor-pointer px-4 py-2 rounded shadow-sm
+           text-light-text-primary dark:text-text-primary;
+  }
+
+  .dark-toggle-btn {
+    @apply px-3 py-1 rounded bg-accent text-white hover:bg-accent-hover transition-all;
+  }
+
+  .product-card {
+    @apply bg-light-card-bg dark:bg-card-bg rounded-[25px] shadow-lg transform
+           hover:-translate-y-1 transition-transform cursor-pointer flex flex-col overflow-hidden;
+  }
+
+  .price-badge {
+    @apply absolute top-2 right-2 px-3 py-1 rounded-full font-bold
+           text-price-text dark:text-text-primary
+           bg-[#1B1226]/30 dark:bg-[#2A1F3B]/50 backdrop-blur-sm shadow-md;
+  }
+
+  .product-title {
+    @apply px-4 py-3 text-center text-lg font-bold
+           text-light-text-primary dark:text-text-primary;
+  }
+
+  .product-description {
+    @apply px-4 text-light-text-secondary dark:text-text-secondary mb-3 line-clamp-3;
+  }
+
+  .product-meta {
+    @apply px-4 text-sm text-light-text-secondary dark:text-text-secondary mb-4 flex justify-between;
+  }
+
+    .dropdown-item {
+    @apply block px-4 py-2 text-light-text-secondary dark:text-text-secondary
+           hover:bg-accent hover:text-text-primary dark:hover:bg-accent dark:hover:text-text-primary
+           cursor-pointer;
+  }
+
+
+.input-field {
+  @apply px-3 py-2 rounded border border-gray-300 dark:border-gray-700
+         bg-light-site-bg dark:bg-site-bg text-light-text-primary dark:text-text-primary
+         focus:outline-none focus:ring-2 focus:ring-accent;
+}
+
+body {
+  background-color: #110F1B; /* dark so browser doesnt flash you on page reload */
+}
+}

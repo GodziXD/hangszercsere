@@ -1,0 +1,43 @@
+<div class="w-full max-w-4xl mx-auto p-4">
+
+  <h2 class="text-2xl font-bold mb-4 text-light-text-primary dark:text-text-primary">Your Cart</h2>
+
+  <ng-container *ngIf="listings.length; else emptyCart">
+    <div *ngFor="let listing of listings" class="bg-light-card-bg dark:bg-card-bg rounded-lg shadow p-4 mb-4 flex flex-col md:flex-row gap-4">
+
+      <!-- Thumbnail -->
+      <img *ngIf="listing.images?.length" [src]="'https://hangszercsere.hu/uploads/' + listing.images[0]"
+           class="w-full md:w-40 h-32 object-cover rounded" alt="Listing Image">
+
+      <!-- Info -->
+      <div class="flex-1 flex flex-col justify-between">
+        <div>
+          <h3 class="text-lg font-bold text-light-text-primary dark:text-text-primary">{{ listing.title }}</h3>
+          <p class="text-light-text-secondary dark:text-text-secondary">{{ listing.description }}</p>
+          <p class="text-sm text-light-text-secondary dark:text-text-secondary">Seller: {{ listing.seller }}</p>
+          <p class="text-sm text-light-text-secondary dark:text-text-secondary">Category: {{ listing.category }}</p>
+        </div>
+
+        <div class="flex items-center justify-between mt-2">
+          <p class="text-lg font-semibold text-light-text-primary dark:text-text-primary">{{ listing.price }} Ft</p>
+          <button (click)="removeFromCart(listing.id)"
+                  class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition">
+            Remove
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Total -->
+    <div class="text-right text-xl font-bold text-light-text-primary dark:text-text-primary">
+      Total: {{ totalPrice }} Ft
+    </div>
+
+  </ng-container>
+
+  <ng-template #emptyCart>
+    <p class="text-light-text-secondary dark:text-text-secondary text-center mt-10">Your cart is empty!</p>
+  </ng-template>
+
+</div>

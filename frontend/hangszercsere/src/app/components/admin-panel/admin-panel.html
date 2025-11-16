@@ -1,0 +1,58 @@
+<ng-container *ngIf="!isAdmin()">
+  <div class="w-full min-h-screen flex items-center justify-center
+              text-light-text-primary dark:text-text-primary text-xl">
+    You are not an admin!
+  </div>
+</ng-container>
+
+<ng-container *ngIf="isAdmin()">
+
+  <div class="w-full min-h-screen bg-light-site-bg dark:bg-site-bg py-10">
+    <div class="max-w-6xl mx-auto px-4">
+
+      <h1 class="text-3xl font-bold text-light-text-primary dark:text-text-primary mb-6">
+        Admin Panel
+      </h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div *ngFor="let listing of listings"
+             class="bg-light-card-bg dark:bg-card-bg rounded-xl shadow-md p-4
+                    flex flex-col gap-3">
+
+          <!-- Image -->
+          <img *ngIf="listing.images?.length"
+               [src]="'https://hangszercsere.hu/uploads/' + listing.images[0]"
+               class="w-full h-40 object-cover rounded-lg"
+               alt="Listing Image">
+
+          <!-- Title + Price -->
+          <h2 class="text-xl font-semibold text-light-text-primary dark:text-text-primary">
+            {{ listing.title }}
+          </h2>
+          <p class="text-accent font-semibold">{{ listing.price }} Ft</p>
+
+          <!-- Details -->
+          <p class="text-sm text-light-text-secondary dark:text-text-secondary">
+            Seller: {{ listing.seller }}
+          </p>
+          <p class="text-sm text-light-text-secondary dark:text-text-secondary">
+            Posted: {{ listing.created_at | date:'mediumDate' }}
+          </p>
+
+          <!-- Delete Button -->
+          <button
+            (click)="RemoveListing(listing.id)"
+            class="bg-red-600 text-white font-semibold py-2 rounded
+                   hover:bg-red-700 transition">
+            Delete Listing
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</ng-container>

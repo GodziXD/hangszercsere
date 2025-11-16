@@ -1,0 +1,55 @@
+import { Component } from '@angular/core';
+import { ListingService,Listing } from '../../services/listing-service/listing-service';
+import { Router } from '@angular/router';
+import { CartService } from '../../services/cart-service/cart-service';
+import { UserService } from '../../services/user-service/user-service';
+import { Filter } from '../filter/filter';
+
+@Component({
+  selector: 'app-home-page',
+  standalone: false,
+  templateUrl: './home-page.html',
+  styleUrl: './home-page.css'
+})
+export class HomePage {
+  public listings: Listing[] = [];
+  public storedListings: Listing[] = [];
+
+  constructor(
+    private ListingService: ListingService,
+    private router: Router,
+    private cart: CartService,
+    private user: UserService,
+  ) {}
+
+  viewListing(id: number) {
+    this.router.navigate(['/listing', id]);
+  }
+
+  SetListing(data:Listing): void
+  {
+  this.ListingService.SetListing(data);
+  }
+
+  AddToCart(listing_id: number): void
+  {
+    if (!this.user.isLoggedIn())  {
+     alert("You must be logged in!");
+     this.router.navigate(['/login']);
+    return;
+  }
+
+    this.cart.AddToCart(listing_id);
+  }
+
+  FilterListings(){
+    this.listings = this.ListingService.FilterListings(this.storedListings);
+  }
+
+  ngOnInit(): void {
+    this.ListingService.GetListings().subscribe(
+      (Data) => (this.listings = Data,
+         this.storedListings = Data)
+    );
+  }
+}

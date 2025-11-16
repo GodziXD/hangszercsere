@@ -1,0 +1,18 @@
+<!-- Only show if open -->
+<div *ngIf="isOpen" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 ">
+  
+  <!-- Close button -->
+  <button (click)="close()"
+          class="absolute top-4 right-4 text-white text-2xl font-bold hover:text-accent">
+    ✕
+  </button>
+
+  <!-- arrows -->
+  <button (click)="prev()" class="absolute left-2 text-white text-3xl font-bold hover:text-accent">&larr;</button>
+  <button (click)="next()" class="absolute right-2 text-white text-3xl font-bold hover:text-accent">&rarr;</button>
+
+  <!-- Current Image -->
+<img [src]="'https://hangszercsere.hu/uploads/' + images[currentIndex]"
+     class="max-h-[90%] max-w-[90%] rounded shadow-lg">
+
+</div>

@@ -1,0 +1,33 @@
+<div 
+  [ngClass]="{'fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50': isMenu, 'block': !isMenu}"
+  *ngIf="show">
+  
+  <div 
+    class="bg-light-card-bg dark:bg-card-bg rounded-lg shadow-lg p-6 w-96 max-w-full"
+    [ngClass]="{'relative': isMenu, 'm-auto': !isMenu}">
+
+    <!-- only for menu -->
+    <button *ngIf="isMenu" (click)="closeMenu()"
+            class="absolute top-2 right-2 text-light-text-secondary dark:text-text-secondary hover:text-accent transition">
+      ✕
+    </button>
+
+    <h2 class="text-xl font-bold mb-4 text-light-text-primary dark:text-text-primary">Login</h2>
+
+    <form (ngSubmit)="LoginUser()" class="flex flex-col gap-3">
+
+      <label class="text-light-text-secondary dark:text-text-secondary">Name</label>
+      <input type="text" [(ngModel)]="name" name="name"
+             required class="input-field" />
+
+      <label class="text-light-text-secondary dark:text-text-secondary">Password</label>
+      <input type="password" [(ngModel)]="password" name="password"
+             required class="input-field" />
+
+      <button type="submit" class="mt-2 bg-accent text-white font-semibold py-2 rounded hover:bg-accent-hover transition">
+        Login
+      </button>
+
+    </form>
+  </div>
+</div>
