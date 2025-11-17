@@ -2,7 +2,7 @@
   <app-filter></app-filter>
 </div>
 
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-4">
+<div class="product-container gap-6 p-4">
   
   <ng-container *ngIf="listings?.length == 0">
     <p class="text-light-text-secondary dark:text-text-secondary">Loading...</p>
@@ -39,8 +39,8 @@
     </div>
     
     <!-- Time since posted -->
-    <div class="mt-1 text-xs text-light-text-muted dark:text-text-muted">
-      {{ listing.created_at | timeAgo }} <!-- Angular pipe to convert date to "1 day ago" -->
+    <div class="px-4 mt-1 text-xs text-light-text-muted flex justify-between dark:text-text-muted">
+      <span>{{ listing.created_at | timeAgo }}</span> <!-- Angular pipe to convert date to "1 day ago" -->
     </div>
     
     <!-- Add to cart -->
