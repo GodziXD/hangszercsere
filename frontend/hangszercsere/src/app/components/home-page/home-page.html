@@ -39,8 +39,8 @@
     </div>
     
     <!-- Time since posted -->
-    <div class="mt-1 text-xs text-light-text-muted dark:text-text-muted">
-      {{ listing.created_at | timeAgo }} <!-- Angular pipe to convert date to "1 day ago" -->
+    <div class="px-4 mt-1 text-xs text-light-text-muted flex justify-between dark:text-text-muted">
+      <span>{{ listing.created_at | timeAgo }}</span> <!-- Angular pipe to convert date to "1 day ago" -->
     </div>
     
     <!-- Add to cart -->
