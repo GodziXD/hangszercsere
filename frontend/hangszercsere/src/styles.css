@@ -63,10 +63,14 @@
     @apply px-4 text-sm text-light-text-secondary dark:text-text-secondary mb-4 flex justify-between;
   }
 
-    .dropdown-item {
+  .dropdown-item {
     @apply block px-4 py-2 text-light-text-secondary dark:text-text-secondary
            hover:bg-accent hover:text-text-primary dark:hover:bg-accent dark:hover:text-text-primary
            cursor-pointer;
+  }
+
+  .hover-button {
+    @apply block w-full text-center rounded font-semibold py-2 dark:hover:bg-accent-hover transition;
   }
 
 

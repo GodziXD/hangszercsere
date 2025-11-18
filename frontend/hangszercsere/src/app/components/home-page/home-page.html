@@ -46,7 +46,7 @@
     <!-- Add to cart -->
     <div class="px-4 pb-4 mt-2">
       <ng-container *ngIf="listing.user_id != this.user.getUserId()">
-        <a (click)="AddToCart(listing.id)" class="block w-full text-center rounded font-semibold py-2 hover:opacity-90 transition">
+        <a (click)="AddToCart(listing.id)" class="hover-button">
           Add to cart
         </a>
       </ng-container>
