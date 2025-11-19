@@ -28,7 +28,7 @@
     </div>
     
     <!-- Description (limited to 2 lines for cleaner UX) -->
-    <div class="product-description mt-1 text-sm text-light-text-secondary dark:text-text-secondary line-clamp-2">
+    <div class="product-description">
       {{ listing.description }}
     </div>
     
@@ -39,10 +39,12 @@
     </div>
     
     <!-- Time since posted -->
-    <div class="px-4 mt-1 text-xs text-light-text-muted flex justify-between dark:text-text-muted">
+    <div class="product-date px-4 mt-1 text-xs text-light-text-muted flex justify-between dark:text-text-muted">
       <span>{{ listing.created_at | timeAgo }}</span> <!-- Angular pipe to convert date to "1 day ago" -->
     </div>
     
+    <hr class="product-break">
+
     <!-- Add to cart -->
     <div class="px-4 pb-4 mt-2">
       <ng-container *ngIf="listing.user_id != this.user.getUserId()">
