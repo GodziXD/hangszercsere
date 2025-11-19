@@ -43,10 +43,8 @@
       <span>{{ listing.created_at | timeAgo }}</span> <!-- Angular pipe to convert date to "1 day ago" -->
     </div>
     
-    <hr class="product-break">
-
     <!-- Add to cart -->
-    <div class="px-4 pb-4 mt-2">
+    <div class="product-actions">
       <ng-container *ngIf="listing.user_id != this.user.getUserId()">
         <a (click)="AddToCart(listing.id)" class="hover-button">
           Add to cart
