@@ -40,7 +40,8 @@
     
     <!-- Time since posted -->
     <div class="product-date px-4 mt-1 text-xs text-light-text-muted flex justify-between dark:text-text-muted">
-      <span>{{ listing.created_at | timeAgo }}</span> <!-- Angular pipe to convert date to "1 day ago" -->
+      
+      <span><i class="nf nf-weather-time_4"></i> {{ listing.created_at | timeAgo }}</span>
     </div>
     
     <!-- Add to cart -->
