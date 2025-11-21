@@ -21,6 +21,7 @@ import { EditProfilePage } from './components/edit-profile-page/edit-profile-pag
 import { EditListingPage } from './components/edit-listing-page/edit-listing-page';
 import { Filter } from './components/filter/filter';
 import { TimeAgoPipe } from './pipes/timeAgo/time-ago-pipe';
+import { Notification } from './components/notification/notification';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { TimeAgoPipe } from './pipes/timeAgo/time-ago-pipe';
     EditListingPage,    
     Filter,
     TimeAgoPipe,
+    Notification,
   ],
   imports: [
     BrowserModule,
