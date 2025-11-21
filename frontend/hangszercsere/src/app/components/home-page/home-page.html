@@ -23,7 +23,7 @@
     </div>
     
     <!-- Title -->
-    <div class="product-title mt-2 font-semibold text-lg line-clamp-1">
+    <div class="product-title">
       {{ listing.title }}
     </div>
     
@@ -33,26 +33,17 @@
     </div>
     
     <!-- Meta info -->
-    <div class="product-meta mt-2 text-xs text-light-text-secondary dark:text-text-secondary flex justify-between">
-      <span>Seller: {{ listing.seller }}</span>
-      <span>Category: {{ listing.category }}</span>
+    <div class="product-meta">
+      <span>Seller: <b>{{ listing.seller }}</b></span>
+      <span>Category: <b>{{ listing.category }}</b></span>
     </div>
     
     <!-- Time since posted -->
-    <div class="product-date px-4 mt-1 text-xs text-light-text-muted flex justify-between dark:text-text-muted">
-      <span>{{ listing.created_at | timeAgo }}</span> <!-- Angular pipe to convert date to "1 day ago" -->
+    <div class="product-date">
+      <span><i class="nf nf-weather-time_2"></i> {{ listing.created_at | timeAgo }}</span> <!-- Angular pipe to convert date to "1 day ago" -->
+      <a class="cart-button">
+        <b><i class="nf nf-md-cart"></i></b>
+      </a>
     </div>
-    
-    <hr class="product-break">
-
-    <!-- Add to cart -->
-    <div class="px-4 pb-4 mt-2">
-      <ng-container *ngIf="listing.user_id != this.user.getUserId()">
-        <a (click)="AddToCart(listing.id)" class="hover-button">
-          Add to cart
-        </a>
-      </ng-container>
-    </div>
-    
   </div>
 </div>
