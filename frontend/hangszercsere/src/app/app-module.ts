@@ -21,7 +21,7 @@ import { EditProfilePage } from './components/edit-profile-page/edit-profile-pag
 import { EditListingPage } from './components/edit-listing-page/edit-listing-page';
 import { Filter } from './components/filter/filter';
 import { TimeAgoPipe } from './pipes/timeAgo/time-ago-pipe';
-import { ProductTest } from './components/product-test/product-test';
+import { NotifComponent } from './components/notif-component/notif-component';
 
 @NgModule({
   declarations: [
@@ -42,7 +42,7 @@ import { ProductTest } from './components/product-test/product-test';
     EditListingPage,    
     Filter,
     TimeAgoPipe,
-    ProductTest,
+    NotifComponent,
   ],
   imports: [
     BrowserModule,
